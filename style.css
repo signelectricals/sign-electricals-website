@@ -529,5 +529,19 @@ footer{
 }
 
 ::-webkit-scrollbar-thumb:hover{
+   .nav-links a.active{
+    color:#f4b400;
+}
+
+.hidden{
+    opacity:0;
+    transform:translateY(40px);
+    transition:.8s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
     background:#003b7a;
 }
