@@ -629,3 +629,64 @@ header{
 .review-card h4{
     color:#0056b3;
 }
+/* ================= FAQ ================= */
+
+.faq{
+
+    padding:100px 8%;
+    background:#eef6ff;
+
+}
+
+.faq-container{
+
+    max-width:900px;
+    margin:auto;
+    margin-top:50px;
+
+}
+
+.faq-item{
+
+    background:#fff;
+    margin-bottom:20px;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.faq-question{
+
+    width:100%;
+    border:none;
+    background:#fff;
+    padding:22px;
+    font-size:19px;
+    font-weight:600;
+    display:flex;
+    justify-content:space-between;
+    cursor:pointer;
+    color:#0056b3;
+
+}
+
+.faq-answer{
+
+    display:none;
+    padding:0 22px 22px;
+
+}
+
+.faq-answer p{
+
+    color:#666;
+    line-height:1.8;
+
+}
+
+.faq-item.active .faq-answer{
+
+    display:block;
+
+}
