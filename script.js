@@ -154,3 +154,16 @@ faqItems.forEach(item=>{
     });
 
 });
+/* Contact Form */
+
+document
+.getElementById("contactForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("Thank you! Your enquiry has been received. We will contact you soon.");
+
+this.reset();
+
+});
