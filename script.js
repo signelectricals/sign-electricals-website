@@ -167,3 +167,34 @@ alert("Thank you! Your enquiry has been received. We will contact you soon.");
 this.reset();
 
 });
+/* ===============================
+   BACK TO TOP
+================================ */
+
+const topBtn=document.getElementById("topBtn");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>500){
+
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+});
+
+topBtn.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+}
