@@ -274,3 +274,21 @@ header{
 }
 
 }
+/* Active Menu */
+
+.nav-links a.active{
+    color:#f4b400;
+}
+
+/* Scroll Animation */
+
+.hidden{
+    opacity:0;
+    transform:translateY(50px);
+    transition:all .8s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
