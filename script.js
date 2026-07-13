@@ -1,17 +1,16 @@
-/* ===========================
-   SIGN ELECTRICALS
-   SCRIPT.JS
-=========================== */
+/* ===========================================
+   SIGN ELECTRICALS - SCRIPT.JS
+=========================================== */
 
-// ===========================
-// HERO IMAGE SLIDER
-// ===========================
+/* ===========================
+   HERO IMAGE SLIDER
+=========================== */
 
 const slides = document.querySelectorAll(".slide");
 
 let currentSlide = 0;
 
-function showSlide(index) {
+function showSlide(index){
 
     slides.forEach(slide => {
         slide.classList.remove("active");
@@ -21,85 +20,96 @@ function showSlide(index) {
 
 }
 
-if (slides.length > 0) {
+function nextSlide(){
 
-    setInterval(() => {
+    currentSlide++;
 
-        currentSlide++;
+    if(currentSlide >= slides.length){
+        currentSlide = 0;
+    }
 
-        if (currentSlide >= slides.length) {
-            currentSlide = 0;
-        }
-
-        showSlide(currentSlide);
-
-    }, 3000);
+    showSlide(currentSlide);
 
 }
 
-// ===========================
-// NAVBAR SHADOW
-// ===========================
+showSlide(currentSlide);
 
-window.addEventListener("scroll", () => {
+/* Change image every 3 seconds */
 
-    const header = document.querySelector("header");
+setInterval(nextSlide,3000);
 
-    if (window.scrollY > 50) {
 
-        header.style.boxShadow = "0 10px 30px rgba(0,0,0,.18)";
+/* ===========================
+   NAVBAR SHADOW
+=========================== */
 
-    } else {
+const header = document.querySelector("header");
 
-        header.style.boxShadow = "0 5px 15px rgba(0,0,0,.08)";
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY > 50){
+
+        header.style.boxShadow="0 10px 30px rgba(0,0,0,.25)";
+
+    }
+
+    else{
+
+        header.style.boxShadow="none";
 
     }
 
 });
 
-// ===========================
-// ACTIVE MENU
-// ===========================
 
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-links a");
+/* ===========================
+   ACTIVE MENU
+=========================== */
 
-window.addEventListener("scroll", () => {
+const sections=document.querySelectorAll("section");
+const navLinks=document.querySelectorAll(".nav-links a");
 
-    let current = "";
+window.addEventListener("scroll",()=>{
 
-    sections.forEach(section => {
+    let current="";
 
-        const sectionTop = section.offsetTop - 150;
-        const sectionHeight = section.clientHeight;
+    sections.forEach(section=>{
 
-        if (pageYOffset >= sectionTop) {
-            current = section.getAttribute("id");
+        const sectionTop=section.offsetTop-120;
+        const sectionHeight=section.clientHeight;
+
+        if(pageYOffset>=sectionTop){
+
+            current=section.getAttribute("id");
+
         }
 
     });
 
-    navLinks.forEach(link => {
+    navLinks.forEach(link=>{
 
         link.classList.remove("active");
 
-        if (link.getAttribute("href") === "#" + current) {
+        if(link.getAttribute("href")==="#"+current){
+
             link.classList.add("active");
+
         }
 
     });
 
 });
 
-// ===========================
-// SMOOTH FADE ANIMATION
-// ===========================
 
-const observer = new IntersectionObserver(entries => {
+/* ===========================
+   SCROLL ANIMATION
+=========================== */
 
-    entries.forEach(entry => {
+const observer = new IntersectionObserver(entries=>{
 
-        if (entry.isIntersecting) {
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
 
             entry.target.classList.add("show");
 
@@ -107,11 +117,9 @@ const observer = new IntersectionObserver(entries => {
 
     });
 
-}, {
-    threshold: 0.2
 });
 
-document.querySelectorAll("section").forEach(section => {
+document.querySelectorAll("section").forEach(section=>{
 
     section.classList.add("hidden");
 
@@ -119,15 +127,15 @@ document.querySelectorAll("section").forEach(section => {
 
 });
 
-// ===========================
-// FOOTER YEAR
-// ===========================
 
-const year = document.getElementById("year");
+/* ===========================
+   FOOTER YEAR
+=========================== */
 
-if (year) {
+const year=document.getElementById("year");
 
-    year.innerHTML =
-        "© " + new Date().getFullYear() + " Sign Electricals. All Rights Reserved.";
+if(year){
+
+    year.textContent=new Date().getFullYear();
 
 }
