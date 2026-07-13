@@ -984,3 +984,58 @@ color:#000;
 transform:translateY(-5px);
 
 }
+/* ===============================
+   LOADER
+================================ */
+
+#loader{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:#fff;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:999999;
+
+}
+
+#loader img{
+
+width:120px;
+
+animation:spin 2s linear infinite;
+
+}
+
+#loader h2{
+
+margin-top:20px;
+
+color:#0056b3;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
