@@ -937,3 +937,50 @@ text-align:center;
 color:#bbb;
 
 }
+/* ===============================
+   BACK TO TOP
+================================ */
+
+#topBtn{
+
+position:fixed;
+
+bottom:95px;
+
+right:25px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:#0056b3;
+
+color:#fff;
+
+font-size:20px;
+
+cursor:pointer;
+
+display:none;
+
+z-index:999;
+
+box-shadow:0 8px 20px rgba(0,0,0,.3);
+
+transition:.3s;
+
+}
+
+#topBtn:hover{
+
+background:#f4b400;
+
+color:#000;
+
+transform:translateY(-5px);
+
+}
