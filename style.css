@@ -706,12 +706,27 @@ footer{
 .footer-grid{
     display:grid;
     grid-template-columns:2fr 1fr 1fr;
+    gap:60px;
+    align-items:flex-start;
+}
+
+@media(max-width:768px){
+
+.footer-grid{
+    grid-template-columns:1fr;
     gap:40px;
 }
 
+}
+
 .footer-logo{
-    width:90px;
-    margin-bottom:15px;
+    width:130px;
+    margin-bottom:20px;
+    transition:.4s;
+}
+
+.footer-logo:hover{
+    transform:scale(1.08) rotate(-3deg);
 }
 
 footer h3,
@@ -719,8 +734,25 @@ footer h4{
     margin-bottom:20px;
 }
 
+footer ul{
+    list-style:none;
+    padding:0;
+}
+
 footer ul li{
-    margin-bottom:12px;
+    margin:15px 0;
+}
+
+footer ul li a{
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+    font-size:17px;
+}
+
+footer ul li a:hover{
+    color:#FFC107;
+    padding-left:8px;
 }
 
 footer a{
@@ -738,7 +770,41 @@ footer a:hover{
     margin-top:40px;
     padding-top:20px;
 }
+.footer-company h3{
+    font-size:30px;
+    color:#fff;
+    margin-bottom:15px;
+}
 
+.footer-company h3 i{
+    color:#FFC107;
+    margin-right:8px;
+}
+
+.footer-company p{
+    color:#d8d8d8;
+    line-height:1.8;
+    font-size:16px;
+    margin-bottom:10px;
+}
+
+.footer-contact{
+    margin-top:20px;
+}
+
+.footer-contact p{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:10px 0;
+    font-size:15px;
+}
+
+.footer-contact i{
+    color:#FFC107;
+    width:20px;
+    text-align:center;
+}
 /* ==========================================
    FLOATING BUTTONS
 ========================================== */
