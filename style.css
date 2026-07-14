@@ -1039,3 +1039,8 @@ transform:rotate(360deg);
 }
 
 }
+/* Active Navigation */
+
+.nav-links a.active{
+    color:#f4b400;
+}
