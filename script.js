@@ -142,22 +142,48 @@ faqItems.forEach(item=>{
 });
 
 /* ==========================
-   CONTACT FORM
+   CONTACT FORM - EMAILJS
 ========================== */
 
-const form=document.getElementById("contactForm");
+const form = document.getElementById("contactForm");
 
-if(form){
+if (form) {
 
-form.addEventListener("submit",function(e){
+    form.addEventListener("submit", function (e) {
 
-e.preventDefault();
+        e.preventDefault();
 
-alert("Thank you! Your enquiry has been received. We will contact you soon.");
+        emailjs.send("service_6uany6d", "template_vnejpr9", {
 
-form.reset();
+            name: document.getElementById("name").value,
 
-});
+            email: document.getElementById("email").value,
+
+            phone: document.getElementById("phone").value,
+
+            message: document.getElementById("message").value
+
+        })
+
+        .then(function () {
+
+            alert("✅ Thank you! Your enquiry has been sent successfully.");
+
+            form.reset();
+
+        })
+
+        .catch(function (error) {
+
+            alert("❌ Failed to send enquiry.");
+
+            console.log(error);
+
+        });
+
+    });
+
+}
 
 }
 
