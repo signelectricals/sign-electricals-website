@@ -706,17 +706,15 @@ footer{
 .footer-grid{
     display:grid;
     grid-template-columns:2fr 1fr 1fr;
-    gap:60px;
-    align-items:flex-start;
+    gap:50px;
+    align-items:start;
 }
 
-@media(max-width:768px){
-
-.footer-grid{
-    grid-template-columns:1fr;
-    gap:40px;
-}
-
+@media (max-width:900px){
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
 }
 
 .footer-logo{
